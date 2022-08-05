@@ -34,7 +34,7 @@ export default function Filter2() {
     useEffect(()=>{
 
 
-        fetch(`http://localhost:6767/restaurant/filter/${currentPageno}`,requestoption)
+        fetch(`https://zomato-edureka-back.herokuapp.com/restaurant/filter/${currentPageno}`,requestoption)
         .then(request=>request.json())
         .then(data=>{
             setRestaurants(data.data);
@@ -46,7 +46,7 @@ export default function Filter2() {
 
 
     useEffect(()=>{
-        fetch('http://localhost:6767/location',{method:'GET'})
+        fetch('https://zomato-edureka-back.herokuapp.com/location',{method:'GET'})
         .then(response=>response.json())
         .then(data=> setlocations(data.data))
     },[])
