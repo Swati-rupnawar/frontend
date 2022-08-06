@@ -3,7 +3,7 @@ import React from 'react'
 import '../../style/Filter2.css'
 
 import { useState, useEffect } from 'react'
-
+import { Link} from 'react-router-dom'
 export default function Filter2() {
 
     const[filter,setfilter]=useState({
@@ -194,7 +194,7 @@ export default function Filter2() {
 
                     <div className='rec'>
                             
-                            <label id="tbcc">{item.name}</label>
+                            <Link to={`/details/${item.name}`}><label id="tbcc">{item.name}</label></Link>
                             <label id="f">{item.locality}</label>
                             <label id="s">{item.city_name}</label>
                             <div className="partition"></div>

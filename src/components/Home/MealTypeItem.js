@@ -1,5 +1,8 @@
 import React from 'react'
 import '../../style/Wallpaper.css'
+import { Link} from 'react-router-dom'
+
+
 
 export default function MealTypeItem(props) {
     const {name,content,image}=props.item
@@ -11,10 +14,12 @@ export default function MealTypeItem(props) {
                     </div>
                     <div className="tileComponent2">
                     <div className="componentHeading">
-                        {name}
+                      <Link to={'/filter'}> {name}</Link>
+                        
                     </div>
                     <div className="componentSubHeading">
-                    {content}
+                    <Link to={'/filter'}>  {content}</Link >
+                    
                     </div>
                 </div>
             </div>
